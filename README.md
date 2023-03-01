@@ -2,7 +2,7 @@
 
 - Face Mesh with ARKit and SwiftUI
 
-[based on](https://github.com/appcoda/Face-Mesh)
+[based on appcoda/Face-Mesh](https://github.com/appcoda/Face-Mesh)
 
 
 # --
