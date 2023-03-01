@@ -1,8 +1,9 @@
 # [FaceMesh](https://github.com/mobilelabclass-itp/07-Face-Mesh)
 
-- Face Mesh with ARKit
+- Face Mesh with ARKit and SwiftUI
 
 [based on](https://github.com/appcoda/Face-Mesh)
+
 
 # --
 
