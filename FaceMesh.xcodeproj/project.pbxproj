@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B7D4E312221CA4800E0E448 /* True Depth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "True Depth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7D4E312221CA4800E0E448 /* FaceMesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceMesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7D4E382221CA4800E0E448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B7D4E3B2221CA4800E0E448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B7D4E3D2221CA4F00E0E448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +24,7 @@
 		8B7D4E422221CA4F00E0E448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB7C41E29AF54F500711661 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABB7C41F29AF54F500711661 /* FaceMeshApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceMeshApp.swift; sourceTree = "<group>"; };
+		ABB7C42229AF606F00711661 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +41,8 @@
 		8B7D4E282221CA4800E0E448 = {
 			isa = PBXGroup;
 			children = (
-				8B7D4E332221CA4800E0E448 /* True Depth */,
+				ABB7C42229AF606F00711661 /* README.md */,
+				8B7D4E332221CA4800E0E448 /* FaceMesh */,
 				8B7D4E322221CA4800E0E448 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +50,12 @@
 		8B7D4E322221CA4800E0E448 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B7D4E312221CA4800E0E448 /* True Depth.app */,
+				8B7D4E312221CA4800E0E448 /* FaceMesh.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B7D4E332221CA4800E0E448 /* True Depth */ = {
+		8B7D4E332221CA4800E0E448 /* FaceMesh */ = {
 			isa = PBXGroup;
 			children = (
 				ABB7C41F29AF54F500711661 /* FaceMeshApp.swift */,
@@ -64,15 +66,15 @@
 				8B7D4E3F2221CA4F00E0E448 /* LaunchScreen.storyboard */,
 				8B7D4E422221CA4F00E0E448 /* Info.plist */,
 			);
-			path = "True Depth";
+			path = FaceMesh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B7D4E302221CA4800E0E448 /* True Depth */ = {
+		8B7D4E302221CA4800E0E448 /* FaceMesh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B7D4E452221CA4F00E0E448 /* Build configuration list for PBXNativeTarget "True Depth" */;
+			buildConfigurationList = 8B7D4E452221CA4F00E0E448 /* Build configuration list for PBXNativeTarget "FaceMesh" */;
 			buildPhases = (
 				8B7D4E2D2221CA4800E0E448 /* Sources */,
 				8B7D4E2E2221CA4800E0E448 /* Frameworks */,
@@ -82,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = "True Depth";
+			name = FaceMesh;
 			productName = "True Depth";
-			productReference = 8B7D4E312221CA4800E0E448 /* True Depth.app */;
+			productReference = 8B7D4E312221CA4800E0E448 /* FaceMesh.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B7D4E2C2221CA4800E0E448 /* Build configuration list for PBXProject "True Depth" */;
+			buildConfigurationList = 8B7D4E2C2221CA4800E0E448 /* Build configuration list for PBXProject "FaceMesh" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B7D4E302221CA4800E0E448 /* True Depth */,
+				8B7D4E302221CA4800E0E448 /* FaceMesh */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RCW2SSL8G;
-				INFOPLIST_FILE = "True Depth/Info.plist";
+				INFOPLIST_FILE = FaceMesh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RCW2SSL8G;
-				INFOPLIST_FILE = "True Depth/Info.plist";
+				INFOPLIST_FILE = FaceMesh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B7D4E2C2221CA4800E0E448 /* Build configuration list for PBXProject "True Depth" */ = {
+		8B7D4E2C2221CA4800E0E448 /* Build configuration list for PBXProject "FaceMesh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B7D4E432221CA4F00E0E448 /* Debug */,
@@ -333,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B7D4E452221CA4F00E0E448 /* Build configuration list for PBXNativeTarget "True Depth" */ = {
+		8B7D4E452221CA4F00E0E448 /* Build configuration list for PBXNativeTarget "FaceMesh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B7D4E462221CA4F00E0E448 /* Debug */,
