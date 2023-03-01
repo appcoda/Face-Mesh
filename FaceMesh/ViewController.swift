@@ -16,7 +16,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var faceLabel: UILabel!
     @IBOutlet weak var labelView: UIView!
     var analysis = ""
-
+    var reportChange: (() -> Void)?
+    
     override func viewDidLoad() {
         print("ViewController viewDidLoad")
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
+        
+        labelView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +69,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             DispatchQueue.main.async {
                 self.faceLabel.text = self.analysis
+                self.reportChange!()
             }
             
         }

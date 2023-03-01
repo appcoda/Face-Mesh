@@ -8,44 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var analysis: String = ""
+    
     var body: some View {
         VStack {
-            BridgeView()
+            BridgeView(analysis: $analysis)
+            Text(analysis).frame(height: 40)
         }
-        .padding()
+//        .padding()
     }
 }
 
 struct BridgeView: UIViewControllerRepresentable {
-    
+    @Binding var analysis: String
+
     func makeUIViewController(context: Context) -> some UIViewController {
         print("BridgeView makeUIViewController")
         
         let storyBoard: UIStoryboard = UIStoryboard(name:"Main", bundle:nil);
-        let viewCtl = storyBoard.instantiateViewController(withIdentifier: "main");
+        let viewCtl = storyBoard.instantiateViewController(withIdentifier: "main") as! ViewController;
         
         print("BridgeView viewCtl", viewCtl)
 
+        viewCtl.reportChange = {
+            // print("reportChange")
+            analysis = viewCtl.analysis
+        }
         return viewCtl
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         print("BridgeView updateUIViewController")
     }
-    
-    func makeCoordinator() -> Coordinator {
-        print("BridgeView makeCoordinator")
-        return Coordinator(self)
-    }
-    
-    class Coordinator: NSObject {
-        private let parent: BridgeView
-
-        init(_ parent: BridgeView) {
-            self.parent = parent
-        }
-    }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
