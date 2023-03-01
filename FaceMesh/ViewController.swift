@@ -16,7 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var faceLabel: UILabel!
     @IBOutlet weak var labelView: UIView!
     var analysis = ""
-    var reportChange: (() -> Void)?
+    var reportChange: (() -> Void)!
     
     override func viewDidLoad() {
         print("ViewController viewDidLoad")
@@ -72,7 +72,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 // Disable UIKit label in Main.storyboard
                 // self.faceLabel.text = self.analysis
                 // Report changes to SwiftUI code
-                self.reportChange!()
+                self.reportChange()
             }
             
         }
