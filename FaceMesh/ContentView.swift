@@ -12,10 +12,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            BridgeView(analysis: $analysis)
             Text(analysis).frame(height: 40)
+            BridgeView(analysis: $analysis)
         }
-//        .padding()
+        //.padding()
     }
 }
 
@@ -38,7 +38,7 @@ struct BridgeView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        print("BridgeView updateUIViewController")
+        // print("BridgeView updateUIViewController")
     }
 }
 

@@ -30,6 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             fatalError("Face tracking is not supported on this device")
         }
         
+        // Disable UIKit label in Main.storyboard
         labelView.isHidden = true
     }
     
@@ -68,7 +69,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             expression(anchor: faceAnchor)
             
             DispatchQueue.main.async {
-                self.faceLabel.text = self.analysis
+                // Disable UIKit label in Main.storyboard
+                // self.faceLabel.text = self.analysis
+                // Report changes to SwiftUI code
                 self.reportChange!()
             }
             

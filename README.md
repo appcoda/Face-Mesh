@@ -4,6 +4,10 @@
 
 [based on appcoda/Face-Mesh](https://github.com/appcoda/Face-Mesh)
 
+- BridgeView uses UIViewControllerRepresentable to create a bridge between UIKit interface code and SwiftUI
+- disabled display of UIKit label, replaced by @Binding var analysis
+- project settings upgraded to iOS 16.0
+- renamed "True Depth" -> FaceMesh
 
 # --
 
