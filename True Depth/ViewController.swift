@@ -18,6 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var analysis = ""
 
     override func viewDidLoad() {
+        print("ViewController viewDidLoad")
         super.viewDidLoad()
         
         labelView.layer.cornerRadius = 10
@@ -30,6 +31,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("ViewController viewWillAppear")
+
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -40,6 +43,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        print("ViewController viewWillDisappear")
+
         super.viewWillDisappear(animated)
         
         // Pause the view's session
