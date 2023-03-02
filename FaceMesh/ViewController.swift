@@ -27,7 +27,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         sceneView.showsStatistics = true
         guard ARFaceTrackingConfiguration.isSupported else {
-            fatalError("Face tracking is not supported on this device")
+            print("Face tracking is not supported on this device")
+            return
         }
         
         // Disable UIKit label in Main.storyboard
