@@ -16,8 +16,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var faceLabel: UILabel!
     @IBOutlet weak var labelView: UIView!
     var analysis = ""
-
+    var reportChange: (() -> Void)!
+    
     override func viewDidLoad() {
+        print("ViewController viewDidLoad")
         super.viewDidLoad()
         
         labelView.layer.cornerRadius = 10
@@ -25,11 +27,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         sceneView.showsStatistics = true
         guard ARFaceTrackingConfiguration.isSupported else {
-            fatalError("Face tracking is not supported on this device")
+            print("Face tracking is not supported on this device")
+            return
         }
+        
+        // Disable UIKit label in Main.storyboard
+        labelView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("ViewController viewWillAppear")
+
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -40,6 +48,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        print("ViewController viewWillDisappear")
+
         super.viewWillDisappear(animated)
         
         // Pause the view's session
@@ -60,7 +70,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             expression(anchor: faceAnchor)
             
             DispatchQueue.main.async {
-                self.faceLabel.text = self.analysis
+                // Disable UIKit label in Main.storyboard
+                // self.faceLabel.text = self.analysis
+                // Report changes to SwiftUI code
+                self.reportChange()
             }
             
         }
